@@ -1,0 +1,4 @@
+TODO: Log results of Hamiltonian validation:
+- Energy conservation
+- Gauge invariance
+- Limits: static molecule, free field

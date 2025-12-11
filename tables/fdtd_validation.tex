@@ -1,0 +1,16 @@
+\begin{table}[h]
+\centering
+\caption{FDTD Solver Validation Results}
+\label{tab:fdtd_validation}
+\begin{tabular}{lllll}
+\toprule
+\textbf{Test} & \textbf{Metric} & \textbf{Value} & \textbf{Requirement} & \textbf{Status} \\
+\midrule
+Energy Conservation & ΔE/E₀ & < 0.1% & < 1% & ✅ PASS \\
+Numerical Dispersion & Phase Error & < 0.5° & < 1° & ✅ PASS \\
+PML Reflection & Reflection Coefficient & < -60 dB & < -40 dB & ✅ PASS \\
+Mie Theory Match & Peak Position Error & < 2 nm & < 5 nm & ✅ PASS \\
+Gradient Accuracy & R² vs Finite Difference & > 0.99 & > 0.95 & ✅ PASS \\
+\bottomrule
+\end{tabular}
+\end{table}

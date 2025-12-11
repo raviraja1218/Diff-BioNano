@@ -1,0 +1,22 @@
+ATOM      1  N   ALA A   1      -0.516   1.046   0.000
+ATOM      2  H   ALA A   1      -0.675   0.058   0.000
+ATOM      3  CA  ALA A   1       0.716   1.736   0.000
+ATOM      4  HA  ALA A   1       0.590   2.816   0.000
+ATOM      5  CB  ALA A   1       1.890   1.020   0.000
+ATOM      6  HB1 ALA A   1       2.823   1.567   0.000
+ATOM      7  HB2 ALA A   1       1.965  -0.055   0.000
+ATOM      8  HB3 ALA A   1       1.858   1.055  -1.044
+ATOM      9  C   ALA A   1       0.684   1.694   1.523
+ATOM     10  O   ALA A   1       0.175   0.711   2.036
+ATOM     11  N   ALA A   2       1.189   2.797   2.230
+ATOM     12  H   ALA A   2       1.496   3.660   1.801
+ATOM     13  CA  ALA A   2       1.355   2.684   3.689
+ATOM     14  HA  ALA A   2       1.133   1.637   4.028
+ATOM     15  CB  ALA A   2       2.786   3.073   4.135
+ATOM     16  HB1 ALA A   2       3.559   2.325   3.923
+ATOM     17  HB2 ALA A   2       2.947   3.944   3.519
+ATOM     18  HB3 ALA A   2       2.896   3.240   5.183
+ATOM     19  C   ALA A   2       0.331   3.640   4.310
+ATOM     20  O   ALA A   2      -0.222   4.490   3.564
+TER
+END

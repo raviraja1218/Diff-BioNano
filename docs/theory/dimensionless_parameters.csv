@@ -1,2 +1,12 @@
 parameter,symbol,value,unit,description
-# TODO: Fill with length, time, energy scales and dimensionless groups.
+Characteristic length,L0,1e-9,m,Base plasmonic feature scale (1 nm placeholder)
+Characteristic time,T0,1e-15,s,Optical cycle / molecular vibration scale (1 fs placeholder)
+Characteristic energy,E0,1.602e-19,J,1 eV energy reference
+Speed-of-light ratio,cT0/L0,,dimensionless,Computed: (c * T0 / L0)
+Plasma frequency scale,omega_p*T0,,dimensionless,Gold plasma frequency in units of 1/T0
+Field amplitude scale,E0_field,1.0,V/m,Reference electric field amplitude
+Dipole strength scale,mu0,3.0e-30,C*m,Typical molecular dipole magnitude
+Coupling strength,g,,dimensionless,Effective EM–molecule coupling parameter
+Domain-to-wavelength ratio,L_domain/lambda,,dimensionless,System size relative to incident wavelength
+Grid resolution ratio,dx/L0,,dimensionless,Spatial resolution vs characteristic length
+Time-step ratio,dt/T0,,dimensionless,Temporal resolution vs characteristic time

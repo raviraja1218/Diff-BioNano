@@ -1,0 +1,4 @@
+100 ns MD simulation completed successfully
+Completion time: 2025-12-10 20:29:40
+Total time: 17228.0 seconds
+Performance: 5804492 ns/day

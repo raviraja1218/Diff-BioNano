@@ -1,0 +1,17 @@
+{
+  "frames": 100,
+  "atoms": 22,
+  "time_ps": 99.0,
+  "dt_ps": 1.0,
+  "shape_3d": [
+    100,
+    22,
+    3
+  ],
+  "shape_2d": [
+    100,
+    22,
+    2
+  ],
+  "note": "USING 1 ns TEST TRAJECTORY - 100 ns file corrupted"
+}

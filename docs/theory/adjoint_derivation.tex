@@ -1,0 +1,99 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, bm}
+\usepackage{physics}
+
+\begin{document}
+
+\section*{Adjoint Method for Maxwell's Equations}
+
+We derive the adjoint equations corresponding to the FDTD
+discretization of Maxwell's equations in a dispersive medium.
+
+\section{Forward Problem}
+
+Maxwell's equations in a non-magnetic, dispersive material:
+\begin{align}
+    \nabla \times \mathbf{E} &= -\mu_0 \frac{\partial \mathbf{H}}{\partial t}, \\
+    \nabla \times \mathbf{H} &= \frac{\partial \mathbf{D}}{\partial t},
+\end{align}
+where the constitutive relation is
+\begin{equation}
+    \mathbf{D}(\mathbf{r}, t) = \varepsilon(\mathbf{r}, \omega) \mathbf{E}(\mathbf{r}, t).
+\end{equation}
+
+Let the objective functional be
+\begin{equation}
+    S = \int_0^T \sum_m \abs{\mathbf{E}(\mathbf{r}_m(t), t)}^2 \, dt.
+\end{equation}
+
+\section{Lagrangian Formulation}
+
+Define the Lagrangian
+\begin{align}
+    \mathcal{L} 
+    &= S 
+    + \int_0^T \int_V 
+        \bm{\lambda}_E \cdot 
+        \left( 
+            \nabla \times \mathbf{H}
+            - \frac{\partial \mathbf{D}}{\partial t}
+        \right) \, dV \, dt \\
+    &\quad + 
+    \int_0^T \int_V 
+        \bm{\lambda}_H \cdot 
+        \left(
+            \nabla \times \mathbf{E}
+            + \mu_0 \frac{\partial \mathbf{H}}{\partial t}
+        \right) 
+        dV \, dt.
+\end{align}
+
+\section{Adjoint Equations}
+
+By taking variations of $\mathcal{L}$ w.r.t.\ $\mathbf{E}$ and $\mathbf{H}$,
+we obtain the adjoint Maxwell equations:
+
+\subsection*{Adjoint electric field}
+
+\begin{equation}
+    -\nabla \times \bm{\lambda}_H 
+    - \frac{\partial}{\partial t}
+    \left(
+        \varepsilon \, \bm{\lambda}_E
+    \right)
+    = \frac{\partial S}{\partial \mathbf{E}}.
+\end{equation}
+
+\subsection*{Adjoint magnetic field}
+
+\begin{equation}
+    \nabla \times \bm{\lambda}_E
+    - \mu_0 \frac{\partial \bm{\lambda}_H}{\partial t}
+    = 0.
+\end{equation}
+
+Boundary conditions follow the same absorbing (PML) structure as the forward problem,
+but applied backwards in time.
+
+\section{Gradient with Respect to Design Parameters}
+
+The gradient of the objective with respect to a design parameter $\rho(\mathbf{r})$
+is
+\begin{equation}
+    \frac{\partial S}{\partial \rho(\mathbf{r})}
+    =
+    -\int_0^T 
+    \bm{\lambda}_E(\mathbf{r}, t)
+    \cdot
+    \frac{\partial \varepsilon(\mathbf{r}, \rho)}{\partial \rho}
+    \mathbf{E}(\mathbf{r}, t)
+    \, dt.
+\end{equation}
+
+\section*{Summary}
+
+The adjoint fields $(\bm{\lambda}_E, \bm{\lambda}_H)$ evolve backward in time
+with a source term located at molecular positions.
+This formulation enables efficient gradient computation.
+
+\end{document}

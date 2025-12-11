@@ -1,5 +1,46 @@
-% Hamiltonian Equations - Diff-BioNano
-% TODO: Derive H_total = H_MD + H_EM + H_int from first principles.
-% - Classical EM Lagrangian
-% - Molecular DOF
-% - Dipole interaction terms
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, bm}
+\begin{document}
+
+\section*{Total Hamiltonian}
+
+We consider a coupled molecular--electromagnetic system with total Hamiltonian
+\begin{equation}
+    H_{\text{tot}} = H_{\text{MD}} + H_{\text{EM}} + H_{\text{int}}.
+\end{equation}
+
+\subsection*{Molecular Hamiltonian $H_{\text{MD}}$}
+
+In classical molecular dynamics with force-field parameters, the molecular Hamiltonian is
+\begin{equation}
+    H_{\text{MD}} = \sum_{i} \frac{\mathbf{p}_i^2}{2 m_i}
+    + \sum_{\text{bonds}} U_{\text{bond}}
+    + \sum_{\text{angles}} U_{\text{angle}}
+    + \sum_{\text{dihedrals}} U_{\text{dihedral}}
+    + \sum_{i<j} \left( U_{\text{LJ}}(r_{ij}) + U_{\text{Coul}}(r_{ij}) \right),
+\end{equation}
+where $m_i$ and $\mathbf{p}_i$ are the mass and momentum of atom $i$.
+
+\subsection*{Electromagnetic Hamiltonian $H_{\text{EM}}$}
+
+In the absence of free charges and currents, the electromagnetic Hamiltonian in a
+dispersive medium is
+\begin{equation}
+    H_{\text{EM}} = \frac{1}{2} \int_V
+    \left(
+        \mathbf{E}(\mathbf{r}, t) \cdot \mathbf{D}(\mathbf{r}, t)
+        +
+        \mathbf{B}(\mathbf{r}, t) \cdot \mathbf{H}(\mathbf{r}, t)
+    \right)
+    \, dV.
+\end{equation}
+
+\subsection*{Interaction Hamiltonian $H_{\text{int}}$}
+
+Within the electric dipole approximation, the light--matter interaction is
+\begin{equation}
+    H_{\text{int}}(t) = - \sum_{m} \bm{\mu}_m \cdot
+    \mathbf{E}(\mathbf{r}_m(t), t),
+\end{equation}
+
+\end{document}

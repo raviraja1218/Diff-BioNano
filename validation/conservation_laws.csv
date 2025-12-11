@@ -1,2 +1,6 @@
-test_case,total_energy_deviation,gauge_check,notes
-# TODO: Populate with numerical conservation results.
+test_case,total_energy_deviation,gauge_invariance,notes
+static_molecule,,,
+free_field,,,
+weak_coupling,,,
+no_pml_lossless,,,
+nanodisk_resonance,,,

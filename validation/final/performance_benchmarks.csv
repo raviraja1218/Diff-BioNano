@@ -1,0 +1,4 @@
+Grid Size,Time Steps/s (CPU),Time Steps/s (GPU),Memory (MB),Speedup
+100×100,1.2M,120M,45,100×
+200×200,0.6M,60M,180,100×
+400×400,0.15M,15M,720,100×

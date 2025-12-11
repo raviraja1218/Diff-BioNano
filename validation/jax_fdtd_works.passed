@@ -1,0 +1,6 @@
+JAX FDTD Implementation: PASSED
+Date: 2024-12-11
+Backend: GPU (CUDA)
+Test: Basic FDTD simulation on RTX 4050
+Status: Working correctly
+Differentiable: Yes

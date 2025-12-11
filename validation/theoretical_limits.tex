@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb}
+\begin{document}
+
+\section*{Validation of Theoretical Limits}
+
+This document records the theoretical validation tests used to confirm the
+correctness of the Hamiltonian formulation and the coupled EM--molecule model.
+
+\section{1. Static Molecule Limit}
+
+When the molecule is fixed ($\mathbf{r}_m(t) = \mathbf{r}_0$) and dipole variation
+is ignored, the interaction Hamiltonian reduces to:
+\begin{equation}
+    H_{\text{int}} = -\bm{\mu} \cdot \mathbf{E}(\mathbf{r}_0).
+\end{equation}
+The EM Hamiltonian must then reproduce known plasmonic analytical results for:
+\begin{itemize}
+    \item a flat interface
+    \item a nanosphere
+    \item a nanodisk
+\end{itemize}
+
+\section{2. Free-Field Limit}
+
+If the nanostructure is removed ($\varepsilon(\mathbf{r}) = \varepsilon_0$),
+the EM field must propagate as:
+\begin{equation}
+    \mathbf{E}(\mathbf{r}, t) = \mathbf{E}_0 e^{i(\mathbf{k}\cdot \mathbf{r} - \omega t)}.
+\end{equation}
+This is used to verify:
+\begin{itemize}
+    \item CFL time step correctness
+    \item Yee grid dispersion relation
+\end{itemize}
+
+\section{3. Weak Coupling Limit}
+
+For small dipole moment:
+\begin{equation}
+    \abs{\bm{\mu}} \ll \abs{\bm{\mu}_0},
+\end{equation}
+the interaction Hamiltonian matches perturbation theory:
+\begin{equation}
+    \Delta S \propto \abs{\bm{\mu}}^2.
+\end{equation}
+
+\section{4. Energy Conservation}
+
+In the absence of PML and loss:
+\begin{equation}
+    \frac{d}{dt} (H_{\text{EM}} + H_{\text{MD}} + H_{\text{int}}) = 0.
+\end{equation}
+
+\section{5. Comparison With Published Analytical Solutions}
+
+We compare:
+\begin{itemize}
+    \item nanodisk plasmon resonance position
+    \item dipole–field interaction strength
+    \item alanine dihedral distribution
+\end{itemize}
+
+\end{document}

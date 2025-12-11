@@ -1,0 +1,10 @@
+Parameter,Value,Description
+Simulation time (TEST),1 ns,Test run for validation
+Number of atoms,22,ACE-ALA-NME peptide
+Time step,2 fs,Standard for biomolecular MD
+Temperature (mean ± std),299.0 ± 59.0 K,NVT ensemble at 300 K target
+Potential energy (mean ± std),-75.2 ± 12.9 kJ/mol,AMBER99SB-ILDN force field
+Performance (mean),1554 ns/day,On NVIDIA RTX 4050 GPU
+Trajectory frames,100,Saved to DCD file
+Frame interval,10 ps,Between saved frames
+Note,Using 1 ns test data for validation,100 ns production file corrupted

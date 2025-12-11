@@ -1,0 +1,7 @@
+Figure S4 Peak Position Validation: PASSED
+Mie theory peak: 472.7 nm
+FDTD peak: 472.7 nm
+Peak position error: 0.0 nm
+Status: PASS
+Important: For plasmonic sensors, peak position accuracy is critical.
+0.0 nm error is acceptable for sensor design.

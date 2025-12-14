@@ -1,0 +1,57 @@
+# =====================
+# Python
+# =====================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# =====================
+# Conda / venv
+# =====================
+.env
+.venv
+conda-meta/
+env/
+venv/
+
+# =====================
+# Large data (keep repo clean)
+# =====================
+data/**/*.npy
+data/**/*.npz
+data/**/*.h5
+data/**/*.dcd
+data/**/*.csv
+
+# Allow SMALL reference data if needed
+!data/materials/*.csv
+!data/molecules/*.pdb
+
+# =====================
+# Optimization checkpoints
+# =====================
+data/optimization/checkpoints/
+logs/
+*.log
+
+# =====================
+# OS / Editor
+# =====================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =====================
+# JAX / CUDA cache
+# =====================
+.cache/
+jax_cache/
+
+# =====================
+# Figures (keep only final)
+# =====================
+figures/raw/
+figures/internal/

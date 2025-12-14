@@ -1,0 +1,13 @@
+{
+  "grid_size": [200, 200],
+  "learning_rate": 0.1,
+  "iterations": 300,
+  "checkpoint_freq": 10,
+  "batch_size": 50,
+  "regularization": 0.01,
+  "material_threshold": 0.5,
+  "gold_permittivity": [-12.0, 1.2],
+  "water_permittivity": 1.77,
+  "wavelength": 600e-9,
+  "dx": 1e-9
+}

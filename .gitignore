@@ -1,57 +1,59 @@
-# =====================
-# Python
-# =====================
+# =========================
+# Python / JAX
+# =========================
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .ipynb_checkpoints/
+.cache/
+jax_cache/
 
-# =====================
-# Conda / venv
-# =====================
-.env
-.venv
-conda-meta/
+# =========================
+# Environments
+# =========================
 env/
 venv/
+.venv/
+conda-meta/
 
-# =====================
-# Large data (keep repo clean)
-# =====================
-data/**/*.npy
-data/**/*.npz
-data/**/*.h5
-data/**/*.dcd
-data/**/*.csv
-
-# Allow SMALL reference data if needed
-!data/materials/*.csv
-!data/molecules/*.pdb
-
-# =====================
-# Optimization checkpoints
-# =====================
-data/optimization/checkpoints/
+# =========================
+# Logs & runtime
+# =========================
 logs/
 *.log
 
-# =====================
-# OS / Editor
-# =====================
+# =========================
+# Large numerical data (NOT for Git)
+# =========================
+data/**/*.npy
+data/**/*.npz
+data/**/*.dcd
+data/**/*.h5
+data/**/*.csv
+
+# =========================
+# Optimization checkpoints
+# =========================
+data/optimization/checkpoints/
+
+# =========================
+# Keep ONLY reference data
+# =========================
+!data/molecules/*.pdb
+!data/materials/*.csv
+
+# =========================
+# Figures (keep FINAL only)
+# =========================
+figures/raw/
+figures/internal/
+figures/analysis/
+
+# =========================
+# OS / Editors
+# =========================
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
-
-# =====================
-# JAX / CUDA cache
-# =====================
-.cache/
-jax_cache/
-
-# =====================
-# Figures (keep only final)
-# =====================
-figures/raw/
-figures/internal/
